@@ -1,18 +1,22 @@
 #include "DxLib.h"
 
-// ƒvƒƒOƒ‰ƒ€‚Í WinMain ‚©‚çn‚Ü‚è‚Ü‚·
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-{
-	if (DxLib_Init() == -1)		// ‚c‚wƒ‰ƒCƒuƒ‰ƒŠ‰Šú‰»ˆ—
-	{
-		return -1;			// ƒGƒ‰[‚ª‹N‚«‚½‚ç’¼‚¿‚ÉI—¹
+// ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã¯ WinMain ã‹ã‚‰å§‹ã¾ã‚Šã¾ã™
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+	// ï¼¤ï¼¸ãƒ©ã‚¤ãƒ–ãƒ©ãƒªåˆæœŸåŒ–å‡¦ç†
+	if (DxLib_Init() == -1) {
+		// ã‚¨ãƒ©ãƒ¼ãŒèµ·ããŸã‚‰ç›´ã¡ã«çµ‚äº†
+		return -1;
 	}
 
-	DrawPixel(320, 240, GetColor(255, 255, 255));	// “_‚ğ‘Å‚Â
+	// ç‚¹ã‚’æ‰“ã¤
+	DrawPixel(320, 240, GetColor(255, 255, 255));
 
-	WaitKey();				// ƒL[“ü—Í‘Ò‚¿
+	// ã‚­ãƒ¼å…¥åŠ›å¾…ã¡
+	WaitKey();
 
-	DxLib_End();				// ‚c‚wƒ‰ƒCƒuƒ‰ƒŠg—p‚ÌI—¹ˆ—
+	// ï¼¤ï¼¸ãƒ©ã‚¤ãƒ–ãƒ©ãƒªä½¿ç”¨ã®çµ‚äº†å‡¦ç†
+	DxLib_End();
 
-	return 0;				// ƒ\ƒtƒg‚ÌI—¹ 
+	// ã‚½ãƒ•ãƒˆã®çµ‚äº† 
+	return 0;
 }
